@@ -18,9 +18,9 @@ export const { setCategories } = categoriesSlice.actions;
 
 export const getCategories = () => (dispatch) => {
   axios
-    .get(`${baseUrl}/products`)
+    .get(`${baseUrl}/products/categories`)
     .then((res) => {
-      console.log(res.data);
+      // console.log(res);
       dispatch(setCategories(res.data));
     })
     .catch((error) => console.log(error));
