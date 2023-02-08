@@ -2,3 +2,35 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.modal_bg-color {
+  background-color: #00000099;
+}
+
+/**********Modal**********/
+.modal {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -50px;
+}
+.cart_modal {
+  justify-content: flex-end;
+  align-items: stretch;
+}
+/**********Aside**********/
+.aside-cart {
+  min-height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin-left: 25vw;
+}
+
+@media screen and (min-width: 768px) {
+  .aside-cart {
+    margin-left: 75vw;
+  }
+}

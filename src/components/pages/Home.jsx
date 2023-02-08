@@ -10,12 +10,17 @@ const Home = () => {
   useEffect(() => {
     getProducts();
   }, []);
+
   console.log(products);
   const getProducts = () => {
     const baseUrl = 'https://fakestoreapi.com';
     axios
       .get(`${baseUrl}/products`)
-      .then((res) => setProducts(res.data))
+      // .get(`${baseUrl}/products`)
+      .then((res) => {
+        console.log(res);
+        setProducts(res.data);
+      })
       .catch((error) => console.log(error));
   };
   return (
