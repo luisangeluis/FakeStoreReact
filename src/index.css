@@ -20,17 +20,42 @@
 }
 /**********Aside**********/
 .aside-cart {
+  width: 100%;
   min-height: 100vh;
+  background-color: #21252999;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 1;
-  margin-left: 25vw;
+}
+.aside-cart_container {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 25%;
+  transition: translateX ease-in-out;
 }
 
+/**********Animations**********/
+.from-right-animation {
+  animation: fromRightAnimation 800ms;
+  opacity: 1;
+}
+
+@keyframes fromRightAnimation {
+  0% {
+    transform: translateX(500px);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/**********Media querys**********/
 @media screen and (min-width: 768px) {
-  .aside-cart {
-    margin-left: 75vw;
+  .aside-cart_container {
+    left: 75%;
   }
 }

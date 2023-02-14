@@ -17,10 +17,10 @@ const Header = () => {
     dispatch(getCategories());
   }, []);
   // console.log(categories);
-
   const handleClickModalCart = () => {
     dispatch(setShowModalCart(true));
   };
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -66,9 +66,16 @@ const Header = () => {
                   ))}
                 </ul>
               </li>
+            </ul>
+            <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item">
                 <button className="nav-link btn" onClick={handleClickModalCart}>
-                  <i className="fa-solid fa-cart-shopping"></i>
+                  Cart <i className="fa-solid fa-cart-shopping"></i>
+                </button>
+              </li>
+              <li className="nav-item">
+                <button className="nav-link btn" onClick={handleClickModalCart}>
+                  Login <i class="fa-solid fa-user"></i>
                 </button>
               </li>
             </ul>
