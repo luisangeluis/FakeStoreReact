@@ -75,7 +75,7 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <button className="nav-link btn" onClick={handleClickModalCart}>
-                  Login <i class="fa-solid fa-user"></i>
+                  Login <i className="fa-solid fa-user"></i>
                 </button>
               </li>
             </ul>

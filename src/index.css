@@ -6,7 +6,9 @@
 .modal_bg-color {
   background-color: #00000099;
 }
-
+body {
+  background-color: #802c6e08;
+}
 /**********Modal**********/
 .modal {
   top: 0;
@@ -36,7 +38,11 @@
   left: 25%;
   transition: translateX ease-in-out;
 }
+/**********Main**********/
 
+.card {
+  /* background-color: #802c6e10; */
+}
 /**********Animations**********/
 .from-right-animation {
   animation: fromRightAnimation 800ms;
@@ -57,5 +63,36 @@
 @media screen and (min-width: 768px) {
   .aside-cart_container {
     left: 75%;
+  }
+  .main_section .card {
+    width: 85%;
+    height: 38vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .main_section .card img {
+    width: 80%;
+    height: 50%;
+  }
+
+  .main_section .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    /* display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column; */
+    overflow: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main_section .card {
+    /* width: 85%; */
+    height: 40vh;
+  }
+  .main_section .card img {
+    height: 52%;
   }
 }

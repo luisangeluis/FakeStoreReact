@@ -27,7 +27,7 @@ const Home = () => {
     <section className="home">
       <div className="container">
         <Hero />
-        <section className="row">
+        <section className="row main_section">
           {products?.map((product) => (
             <ProductCard product={product} key={product.id} />
           ))}
