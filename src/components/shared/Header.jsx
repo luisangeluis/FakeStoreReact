@@ -16,7 +16,8 @@ const Header = () => {
   useEffect(() => {
     dispatch(getCategories());
   }, []);
-  // console.log(categories);
+
+  console.log(categories);
   const handleClickModalCart = () => {
     dispatch(setShowModalCart(true));
   };
@@ -39,34 +40,24 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Categories
-                </a>
-                <ul className="dropdown-menu">
-                  {categories?.map((category) => (
-                    <li key={category}>
-                      <NavLink
-                        className={({ isActive }) =>
-                          isActive ? 'nav-link active' : 'nav-link'
-                        }
-                        to={`/products/category/${category}`}
-                      >
-                        {category}
-                      </NavLink>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            </ul>
+          <div
+            className="collapse navbar-collapse d-lg-flex justify-content-lg-around"
+            id="navbarSupportedContent"
+          >
+            <select
+              className="categories-select form-select my-3 my-md-1 w-md-25"
+              aria-label="Default select example"
+            >
+              {categories.map((category, i) =>
+                i === 0 ? (
+                  <option defaultValue key={i}>
+                    {category}
+                  </option>
+                ) : (
+                  <option key={i}>{category}</option>
+                )
+              )}
+            </select>
             <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item">
                 <button className="nav-link btn" onClick={handleClickModalCart}>

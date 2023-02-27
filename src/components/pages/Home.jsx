@@ -12,10 +12,11 @@ const Home = () => {
   }, []);
 
   console.log(products);
+
   const getProducts = () => {
     const baseUrl = 'https://fakestoreapi.com';
     axios
-      .get(`${baseUrl}/products`)
+      .get(`${baseUrl}/products?limit=100`)
       // .get(`${baseUrl}/products`)
       .then((res) => {
         console.log(res);
@@ -23,6 +24,7 @@ const Home = () => {
       })
       .catch((error) => console.log(error));
   };
+
   return (
     <section className="home">
       <div className="container">

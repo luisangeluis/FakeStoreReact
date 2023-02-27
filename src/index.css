@@ -40,9 +40,6 @@ body {
 }
 /**********Main**********/
 
-.card {
-  /* background-color: #802c6e10; */
-}
 /**********Animations**********/
 .from-right-animation {
   animation: fromRightAnimation 800ms;
@@ -64,6 +61,7 @@ body {
   .aside-cart_container {
     left: 75%;
   }
+  /**********Main**********/
   .main_section .card {
     width: 85%;
     height: 38vh;
@@ -88,11 +86,17 @@ body {
   }
 }
 @media screen and (min-width: 992px) {
+  /**********Main**********/
+
   .main_section .card {
     /* width: 85%; */
     height: 40vh;
   }
   .main_section .card img {
     height: 52%;
+  }
+
+  .categories-select {
+    width: 30%;
   }
 }

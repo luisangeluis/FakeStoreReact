@@ -5,10 +5,13 @@ const baseUrl = 'https://fakestoreapi.com';
 
 export const categoriesSlice = createSlice({
   name: 'categories',
-  initialState: null,
+  initialState: ['all'],
   reducers: {
     setCategories: (state, action) => {
-      return action.payload;
+      // return action.payload;
+      let result = state.concat(action.payload);
+      // result += action.payload;
+      return result;
     },
   },
 });
